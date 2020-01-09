@@ -1,0 +1,4 @@
+github "Quick/Quick"
+github "Quick/Nimble"
+github "uber/ios-snapshot-test-case" ~> 6.1.0
+github "ashfurrow/Nimble-Snapshots"

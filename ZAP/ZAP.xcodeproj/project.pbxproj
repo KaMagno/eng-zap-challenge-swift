@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,10 @@
 		18D79DAA23D00150009FFD08 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D79DA723D00150009FFD08 /* FBSnapshotTestCase.framework */; };
 		18D79DAB23D00150009FFD08 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D79DA823D00150009FFD08 /* Quick.framework */; };
 		18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */; };
+		18D79DCE23D0C66A009FFD08 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 18D79DCD23D0C66A009FFD08 /* swiftgen.yml */; };
+		18D79DD723D0C887009FFD08 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DD123D0C887009FFD08 /* GeneratedStrings.swift */; };
+		18D79DD823D0C887009FFD08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18D79DD323D0C887009FFD08 /* Localizable.strings */; };
+		18D79DD923D0C887009FFD08 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DD623D0C887009FFD08 /* GeneratedStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,14 @@
 		18D79DA723D00150009FFD08 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		18D79DA823D00150009FFD08 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+DefaultFrame.swift"; sourceTree = "<group>"; };
+		18D79DBF23D0B6F4009FFD08 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		18D79DC023D0B6F4009FFD08 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18D79DC323D0B742009FFD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		18D79DCD23D0C66A009FFD08 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		18D79DD123D0C887009FFD08 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
+		18D79DD423D0C887009FFD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		18D79DD523D0C887009FFD08 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		18D79DD623D0C887009FFD08 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +285,8 @@
 				1815DF8F23C7E6A2005CDA69 /* Models */,
 				1815DF9823C7E6A2005CDA69 /* Network */,
 				1815DF8223C7E6A2005CDA69 /* Screens */,
+				18D79DCF23D0C887009FFD08 /* Resources */,
+				18D79DCC23D0C66A009FFD08 /* Config */,
 				183D93E523C4C532005DAB20 /* Supporting Files */,
 			);
 			path = ZAP;
@@ -334,6 +348,40 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		18D79DCC23D0C66A009FFD08 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DCD23D0C66A009FFD08 /* swiftgen.yml */,
+			);
+			path = Config;
+			sourceTree = SOURCE_ROOT;
+		};
+		18D79DCF23D0C887009FFD08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DD023D0C887009FFD08 /* Generated */,
+				18D79DD223D0C887009FFD08 /* Localization */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18D79DD023D0C887009FFD08 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DD123D0C887009FFD08 /* GeneratedStrings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		18D79DD223D0C887009FFD08 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DD323D0C887009FFD08 /* Localizable.strings */,
+				18D79DD623D0C887009FFD08 /* GeneratedStrings.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +395,7 @@
 				183D93E623C4FEED005DAB20 /* Copy frameworks from Carthage */,
 				183D93EE23C502B0005DAB20 /* Embed Frameworks */,
 				183D93EF23C50537005DAB20 /* Warn about outdated dependencies */,
+				18D79DC423D0B85B009FFD08 /* Swiftgen strings */,
 			);
 			buildRules = (
 			);
@@ -396,12 +445,13 @@
 				};
 			};
 			buildConfigurationList = 183D93C923C4C507005DAB20 /* Build configuration list for PBXProject "ZAP" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 183D93C523C4C507005DAB20;
 			productRefGroup = 183D93CF23C4C507005DAB20 /* Products */;
@@ -419,6 +469,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D79DD823D0C887009FFD08 /* Localizable.strings in Resources */,
+				18D79DCE23D0C66A009FFD08 /* swiftgen.yml in Resources */,
 				1815DF9C23C7E6A3005CDA69 /* Main.storyboard in Resources */,
 				183D93DE23C4C50C005DAB20 /* LaunchScreen.storyboard in Resources */,
 				183D93DB23C4C50C005DAB20 /* Assets.xcassets in Resources */,
@@ -501,6 +553,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
+		18D79DC423D0B85B009FFD08 /* Swiftgen strings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftgen strings";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen config run --config Config/swiftgen.yml\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -518,11 +588,13 @@
 				1815DFAF23C7EA5C005CDA69 /* GenericError.swift in Sources */,
 				1815DFB423C7F313005CDA69 /* LoadingPresentable.swift in Sources */,
 				1815DFA723C7E6A3005CDA69 /* PropertiesService.swift in Sources */,
+				18D79DD923D0C887009FFD08 /* GeneratedStrings.swift in Sources */,
 				1815DFA223C7E6A3005CDA69 /* Address.swift in Sources */,
 				183D93D223C4C507005DAB20 /* AppDelegate.swift in Sources */,
 				1815DFA623C7E6A3005CDA69 /* PublishableError.swift in Sources */,
 				1815DFA423C7E6A3005CDA69 /* JSONSchemaSupport.swift in Sources */,
 				183D93D423C4C507005DAB20 /* SceneDelegate.swift in Sources */,
+				18D79DD723D0C887009FFD08 /* GeneratedStrings.swift in Sources */,
 				1815DFA523C7E6A3005CDA69 /* GeoLocation.swift in Sources */,
 				1815DF9D23C7E6A3005CDA69 /* HomeInteractor.swift in Sources */,
 				1815DF9B23C7E6A3005CDA69 /* HomeViewController.swift in Sources */,
@@ -555,6 +627,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				1815DF8923C7E6A2005CDA69 /* Base */,
+				18D79DBF23D0B6F4009FFD08 /* pt-BR */,
+				18D79DC323D0B742009FFD08 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -563,8 +637,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				183D93DD23C4C50C005DAB20 /* Base */,
+				18D79DC023D0B6F4009FFD08 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18D79DD323D0C887009FFD08 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D79DD423D0C887009FFD08 /* en */,
+				18D79DD523D0C887009FFD08 /* pt-BR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -634,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

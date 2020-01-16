@@ -12,10 +12,6 @@ jobs:
         destination: ['platform=iOS Simulator,OS=13.3,name=iPhone 8', 'platform=iOS Simulator,OS=13.3,name=iPhone 11']
     steps:
     - uses: actions/checkout@v1
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
     - name: Dependencies
       run: carthage bootstrap --no-use-binaries --platform iOS --cache-builds
     - name: Build and test

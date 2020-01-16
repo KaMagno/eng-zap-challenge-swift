@@ -31,6 +31,10 @@
 		1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897627923CFCBAF0007E7FB /* EmptyView.swift */; };
 		18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA223CFCF5F009FFD08 /* CodeView.swift */; };
 		18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */; };
+		18D79DA923D00150009FFD08 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D79DA623D00150009FFD08 /* Nimble.framework */; };
+		18D79DAA23D00150009FFD08 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D79DA723D00150009FFD08 /* FBSnapshotTestCase.framework */; };
+		18D79DAB23D00150009FFD08 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D79DA823D00150009FFD08 /* Quick.framework */; };
+		18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		1897627923CFCBAF0007E7FB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		18D79DA223CFCF5F009FFD08 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpec.swift; sourceTree = "<group>"; };
+		18D79DA623D00150009FFD08 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		18D79DA723D00150009FFD08 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		18D79DA823D00150009FFD08 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+DefaultFrame.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D79DA923D00150009FFD08 /* Nimble.framework in Frameworks */,
+				18D79DAA23D00150009FFD08 /* FBSnapshotTestCase.framework in Frameworks */,
+				18D79DAB23D00150009FFD08 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +291,9 @@
 		183D93E723C502B0005DAB20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18D79DA723D00150009FFD08 /* FBSnapshotTestCase.framework */,
+				18D79DA623D00150009FFD08 /* Nimble.framework */,
+				18D79DA823D00150009FFD08 /* Quick.framework */,
 				183D93E923C502B0005DAB20 /* Kingfisher.framework */,
 				183D93E823C502B0005DAB20 /* SnapKit.framework */,
 			);
@@ -290,9 +304,34 @@
 			isa = PBXGroup;
 			children = (
 				18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */,
-				183D93FD23C5063B005DAB20 /* Info.plist */,
+				18D79DAC23D001E6009FFD08 /* Support */,
+				18D79DAD23D001E9009FFD08 /* Support Files */,
 			);
 			path = ZAPTests;
+			sourceTree = "<group>";
+		};
+		18D79DAC23D001E6009FFD08 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DAE23D001FD009FFD08 /* Extensions */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		18D79DAD23D001E9009FFD08 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				183D93FD23C5063B005DAB20 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		18D79DAE23D001FD009FFD08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */,
 				18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +734,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B6823827K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ZAPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,6 +758,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B6823827K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ZAPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

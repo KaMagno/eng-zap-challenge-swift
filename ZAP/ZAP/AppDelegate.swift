@@ -29,16 +29,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    /**
-     # Type a script or drag a script file from your workspace to insert its path.
-     Resources=$PROJECT_DIR/ZAP/Resources
-     SwiftgenDir=$PROJECT_DIR/swiftgen/
-     Templates=$SwiftgenDir/templates
-     LocalizationInput= $Resources/Localization/en.lproj/Localizable.strings
-     LocalizationOutput= $Resources/Localization/GeneratedStrings.swift
-
-     $SwiftgenDir/bin/swiftgen strings $LocalizationInput -p $Templates/strings/structured-swift4.stencil --output $LocalizationOutput;
-
-     */
 }
 

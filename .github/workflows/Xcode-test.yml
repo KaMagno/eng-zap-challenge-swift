@@ -13,7 +13,3 @@ jobs:
       with:
         # The lane that should be executed.
         lane: tests
-        # The relative path from the project root directory to the subdirectory where the fastlane folder is located.
-        subdirectory: ZAP
-        # The directory where Ruby gems should be installed to and cached. If a relative path is specified, it's applied relative to the location of the Gemfile, which is either the project root or the directory from the `subdirectory` parameter.
-        bundle-install-path: ZAP

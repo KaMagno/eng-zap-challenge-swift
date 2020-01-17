@@ -13,4 +13,4 @@ jobs:
       with:
         # The lane that should be executed.
         lane: tests
-        subdirectory: 'ZAP'
+        subdirectory: '../ZAP'

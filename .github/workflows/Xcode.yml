@@ -14,6 +14,6 @@ jobs:
     - uses: actions/checkout@master
     - name: Build and test
       run: |
-         cd ZAP && xcodebuild clean test -project ZAP.xcodeproj -scheme ZA{Test -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+         cd ZAP && xcodebuild clean test -project ZAP.xcodeproj -scheme ZAPTest -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       env:
          destination: ${{ matrix.destination }}

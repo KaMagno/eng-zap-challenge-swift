@@ -37,7 +37,6 @@
 		18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DAF23D0020A009FFD08 /* QuickSpec+DefaultFrame.swift */; };
 		18D79DCE23D0C66A009FFD08 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 18D79DCD23D0C66A009FFD08 /* swiftgen.yml */; };
 		18D79DE323D0C96A009FFD08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18D79DDE23D0C96A009FFD08 /* Localizable.strings */; };
-		18E3701723D12E4800C81A2F /* ErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3701623D12E4800C81A2F /* ErrorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +104,6 @@
 		18D79DDC23D0C96A009FFD08 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
 		18D79DDF23D0C96A009FFD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18D79DE023D0C96A009FFD08 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		18E3701623D12E4800C81A2F /* ErrorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */,
-				18E3701623D12E4800C81A2F /* ErrorSpec.swift */,
 				18D79DAC23D001E6009FFD08 /* Support */,
 				18D79DAD23D001E9009FFD08 /* Support Files */,
 			);
@@ -605,7 +602,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */,
-				18E3701723D12E4800C81A2F /* ErrorSpec.swift in Sources */,
 				18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

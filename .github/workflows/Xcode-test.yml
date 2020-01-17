@@ -15,11 +15,11 @@ jobs:
     - name: Dependencies
       run:
           cd ZAP
-          carthage bootstrap --no-use-binaries --platform iOS --cache-builds
+          carthage bootstrap --no-use-binaries --platform iOS --cache-builds --verbose
     - name: Build and test
       run:
           cd ZAP
-          xcodebuild clean test -project ZAP.xcodeproj -scheme ZAP -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-          bash <(curl -s https://codecov.io/bash)
+          xcodebuild clean build-for-testing -enableCodeCoverage YES  -project ZAP.xcodeproj -scheme ZAP -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        
       env: 
          destination: ${{ matrix.destination }}

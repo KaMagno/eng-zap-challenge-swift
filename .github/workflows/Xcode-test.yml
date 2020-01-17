@@ -7,19 +7,13 @@ jobs:
 
     runs-on: macOS-latest
     
-    strategy:
-      matrix:
-        destination: ['platform=iOS Simulator,OS=13.3,name=iPhone 8', 'platform=iOS Simulator,OS=13.3,name=iPhone 11']
     steps:
-    - uses: actions/checkout@v1
-    - name: Dependencies
-      run:
-          cd ZAP
-          carthage bootstrap --no-use-binaries --platform iOS --cache-builds
-    - name: Build and test
-      run:
-          cd ZAP
-          xcodebuild clean test -project ZAP.xcodeproj -scheme ZAP -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-          bash <(curl -s https://codecov.io/bash)
-      env: 
-         destination: ${{ matrix.destination }}
+    - name: Fastlane Action
+      uses: maierj/fastlane-action@v1.2.0
+      with:
+        # The lane that should be executed.
+        lane: tests
+        # The relative path from the project root directory to the subdirectory where the fastlane folder is located.
+        subdirectory: ZAP
+        # The directory where Ruby gems should be installed to and cached. If a relative path is specified, it's applied relative to the location of the Gemfile, which is either the project root or the directory from the `subdirectory` parameter.
+        bundle-install-path: ZAP

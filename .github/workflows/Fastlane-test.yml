@@ -9,8 +9,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - name: Carthage Bootstrap
-      run: cd ZAP && carthage bootstrap --platform iOS
     - name: Bundle Install
       run: cd ZAP && bundle install
     - name: Fastlane Test

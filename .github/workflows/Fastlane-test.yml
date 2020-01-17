@@ -1,0 +1,17 @@
+name: Xcode Test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Carthage Bootstrap
+      run: cd ZAP && carthage bootstrap --platform iOS
+    - name: Bundle Install
+      run: cd ZAP && bundle install
+    - name: Fastlane Test
+      run: cd ZAP bundle exec fastlane test

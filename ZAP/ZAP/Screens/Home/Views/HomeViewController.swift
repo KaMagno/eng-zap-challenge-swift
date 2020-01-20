@@ -38,7 +38,7 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
         return ErrorView(delegate: self)
     }()
     private var defaultView: UIView?
-    private var collectionDataSource: HomeCollectionDataSource?
+    private var collectionHandler: HomeCollectionHandler?
 
     // MARK: Public
     var delegate: HomeViewDelegate?
@@ -64,8 +64,10 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
     }
 
     private func setupDataSource(to collectionView: UICollectionView) {
-        collectionDataSource = HomeCollectionDataSource()
-        collectionView.dataSource = collectionDataSource
+        collectionHandler = HomeCollectionHandler()
+        collectionHandler?.delegate = self
+        collectionView.dataSource = collectionHandler
+        collectionView.delegate = collectionHandler
     }
 
     // MARK: - IBActions
@@ -90,7 +92,7 @@ extension HomeViewController: HomeViewInterface {
     }
 
     func set(_ data: Properties) {
-        self.collectionDataSource?.properties = data
+        self.collectionHandler?.properties = data
         DispatchQueue.main.async {
             self.outletCollection.reloadData()
         }
@@ -101,5 +103,11 @@ extension HomeViewController: HomeViewInterface {
 extension HomeViewController: ErrorViewDelegate {
     func didTap(_ view: ErrorView) {
         delegate?.handleFetchData(self)
+    }
+}
+
+extension HomeViewController: HomeCollectionHandlerDelegate {
+    func didEndPage() {
+        delegate?.handleFetchMoreData(self)
     }
 }

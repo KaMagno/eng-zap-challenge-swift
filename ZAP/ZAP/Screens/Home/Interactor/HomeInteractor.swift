@@ -78,6 +78,8 @@ extension HomeInteractor: HomeInteractorInterface {
     }
 
     func fetchMoreProperties() {
+        page += 1
         addMoreProperties()
+        update()
     }
 }

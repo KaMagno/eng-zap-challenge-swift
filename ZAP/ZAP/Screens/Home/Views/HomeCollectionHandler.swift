@@ -1,5 +1,5 @@
 //
-//  HomeCollectionDataSource.swift
+//  HomeCollectionHandler.swift
 //  ZAP
 //
 //  Created by kaique.magno.santos on 17/01/20.
@@ -8,12 +8,16 @@
 
 import UIKit
 
-final class HomeCollectionDataSource: NSObject {
-    var properties: Properties = []
-
+protocol HomeCollectionHandlerDelegate: AnyObject {
+    func didEndPage()
 }
 
-extension HomeCollectionDataSource: UICollectionViewDataSource {
+final class HomeCollectionHandler: NSObject {
+    var properties: Properties = []
+    weak var delegate: HomeCollectionHandlerDelegate?
+}
+
+extension HomeCollectionHandler: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collectionView.backgroundView?.isHidden = !properties.isEmpty
@@ -35,5 +39,13 @@ extension HomeCollectionDataSource: UICollectionViewDataSource {
                    parkingAreas: property.parkingSpaces)
 
         return cell
+    }
+}
+
+extension HomeCollectionHandler: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == (properties.count - 5) {
+            delegate?.didEndPage()
+        }
     }
 }

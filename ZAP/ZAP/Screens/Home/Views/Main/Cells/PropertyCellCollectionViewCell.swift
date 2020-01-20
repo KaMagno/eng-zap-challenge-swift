@@ -42,4 +42,14 @@ class PropertyCellCollectionViewCell: UICollectionViewCell {
             outletParkingSpaces.text = Formatter.parkingAreas(parkingAreas)
         }
     }
+
+    override func prepareForReuse() {
+        outletImageView.image = Asset.photoPlaceholder.image
+        outletTitle.text = nil
+        outletPrice.text = nil
+        outleBedRooms.text = nil
+        outletBathRooms.text = nil
+        outletUsableAreas.text = nil
+        outletParkingSpaces.text = nil
+    }
 }

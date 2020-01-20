@@ -9,6 +9,6 @@
 import Foundation
 
 struct GeoLocation: Codable {
-    let precision: String
+    let precision: Precision
     let location: Location
 }

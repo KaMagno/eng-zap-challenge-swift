@@ -9,7 +9,7 @@
 import Foundation
 
 struct Address: Codable {
-    let city: String
+    let city: City
     let neighborhood: String
     let geoLocation: GeoLocation
 }

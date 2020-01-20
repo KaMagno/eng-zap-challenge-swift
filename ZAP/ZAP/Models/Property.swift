@@ -10,16 +10,15 @@ import Foundation
 
 struct Property: Codable {
     let usableAreas: Int
-    let listingType: String
+    let listingType: ListingType
     let createdAt: String
-    let listingStatus: String
+    let listingStatus: ListingStatus
     let id: String
-    let parkingSpaces: Int
+    let parkingSpaces: Int?
     let updatedAt: String
     let owner: Bool
     let images: [String]
     let address: Address
-    let bathrooms: Int
-    let bedrooms: Int
+    let bathrooms, bedrooms: Int
     let pricingInfos: PricingInfos
 }

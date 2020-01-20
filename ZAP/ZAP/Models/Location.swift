@@ -9,6 +9,6 @@
 import Foundation
 
 struct Location: Codable {
-    let lon: Int
-    let lat: Int
+    let lon: Double = 0.0
+    let lat: Double = 0.0
 }

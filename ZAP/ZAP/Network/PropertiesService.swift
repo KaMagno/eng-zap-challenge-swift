@@ -14,10 +14,10 @@ protocol PropertiesServiceInterface: AnyObject {
 
 final class PropertiesService {
     private enum Constants: String {
-        case propertiesURL = "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-3"
+        case propertiesURL = "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-1.json"
     }
 
-    let urlSession: URLSession = URLSession.shared
+    let urlSession: URLSession = URLSession(configuration: .default)
 }
 
 extension PropertiesService: PropertiesServiceInterface {
@@ -33,13 +33,14 @@ extension PropertiesService: PropertiesServiceInterface {
 
         let request = URLRequest(url: url)
 
-        urlSession.dataTask(with: request) { [weak self] (data, reponse, error) in
+        let task = urlSession.dataTask(with: request) { [weak self] (data, reponse, error) in
             guard let self = self else { return }
             self.handlePropertiesDataTask(data: data,
                                      response: reponse,
                                      error: error,
                                      completion: completion)
         }
+        task.resume()
     }
 
     private func handlePropertiesDataTask(data: Data?,

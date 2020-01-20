@@ -8,30 +8,42 @@
 
 import Foundation
 
-protocol HomeInteractorInterface: AnyObject {
+protocol HomeInteractorInterface {
+    var delegate: HomeInteractorDelegate? {get set}
+
     func fetchProperties()
     func fetchMoreProperties()
 }
 
+protocol HomeInteractorDelegate: AnyObject {
+    func didFetch(_ properties: Properties)
+    func didFetch(_ error: PublishableError)
+}
+
 final class HomeInteractor {
 
+    // MARK: - Variable
+    // MARK: Private
     private let service: PropertiesServiceInterface
-    private let presenter: HomePresenterInterface
     private var allProperties: Properties = []
     private var visibleProperties: Properties = []
     private var page = 0
     private var numbersOfElementsInPage = 20
 
-    init(service: PropertiesServiceInterface,
-         presenter: HomePresenterInterface) {
+    // MARK: Public
+    weak var delegate: HomeInteractorDelegate?
+
+    // MARK: - Init
+    init(service: PropertiesServiceInterface) {
         self.service = service
-        self.presenter = presenter
     }
 
+    // MARK: - Functions
     private func handle(properties: Properties) {
         resetPage()
         allProperties = properties
         addMoreProperties()
+        update()
     }
 
     private func addMoreProperties() {
@@ -47,10 +59,11 @@ final class HomeInteractor {
     }
 
     private func update() {
-        presenter.show(properties: visibleProperties)
+        delegate?.didFetch(visibleProperties)
     }
 }
 
+// MARK: - HomeInteractorInterface
 extension HomeInteractor: HomeInteractorInterface {
     func fetchProperties() {
         service.requestProperties { [weak self] (result) in
@@ -59,7 +72,7 @@ extension HomeInteractor: HomeInteractorInterface {
                 self?.handle(properties: properties)
 
             case .failure(let error):
-                self?.presenter.show(error: error)
+                self?.delegate?.didFetch(error)
             }
         }
     }

@@ -9,8 +9,10 @@
 import Foundation
 
 struct PricingInfos: Codable {
-    let yearlyIptu: String
+    let yearlyIptu: String?
     let price: String
-    let businessType: String
-    let monthlyCondoFee: String
+    let businessType: BusinessType
+    let monthlyCondoFee: String?
+    let period: Period?
+    let rentalTotalPrice: String?
 }

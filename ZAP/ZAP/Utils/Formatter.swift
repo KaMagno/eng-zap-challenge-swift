@@ -18,15 +18,10 @@ final class Formatter {
         }
     }
 
-    static func price(_ value: String) -> String? {
+    static func price(_ value: Int) -> String? {
         let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-
-        guard let number = formatter.number(from: value) else {
-            return nil
-        }
-
         formatter.numberStyle = .currency
+        let number = NSNumber(integerLiteral: value)
         return formatter.string(from: number)
     }
 

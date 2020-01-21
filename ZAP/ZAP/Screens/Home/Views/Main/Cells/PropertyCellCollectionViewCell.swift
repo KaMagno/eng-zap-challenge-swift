@@ -21,7 +21,7 @@ class PropertyCellCollectionViewCell: UICollectionViewCell {
 
     func setup(imageURL: URL?,
                title: BusinessType,
-               price: String,
+               price: Int,
                bedRooms: Int,
                bathRooms: Int,
                usableAreas: Int,

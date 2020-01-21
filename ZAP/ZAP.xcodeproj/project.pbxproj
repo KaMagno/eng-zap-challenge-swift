@@ -35,6 +35,8 @@
 		183D93D423C4C507005DAB20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D93D323C4C507005DAB20 /* SceneDelegate.swift */; };
 		183D93DB23C4C50C005DAB20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183D93DA23C4C50C005DAB20 /* Assets.xcassets */; };
 		183D93DE23C4C50C005DAB20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D93DC23C4C50C005DAB20 /* LaunchScreen.storyboard */; };
+		184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76523D73C53006400D4 /* PropertyFilter.swift */; };
+		184CC76823D74866006400D4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76723D74866006400D4 /* Errors.swift */; };
 		1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897627923CFCBAF0007E7FB /* EmptyView.swift */; };
 		18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA223CFCF5F009FFD08 /* CodeView.swift */; };
 		18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */; };
@@ -117,6 +119,8 @@
 		183D93E923C502B0005DAB20 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		183D93F923C5063B005DAB20 /* ZAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZAPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		183D93FD23C5063B005DAB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184CC76523D73C53006400D4 /* PropertyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFilter.swift; sourceTree = "<group>"; };
+		184CC76723D74866006400D4 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		1897627923CFCBAF0007E7FB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		18D79DA223CFCF5F009FFD08 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpec.swift; sourceTree = "<group>"; };
@@ -235,17 +239,17 @@
 			children = (
 				1815DFAD23C7EA4A005CDA69 /* Errors */,
 				1815DF9423C7E6A2005CDA69 /* Result.swift */,
+				1815DF9223C7E6A2005CDA69 /* Property.swift */,
+				1815DF9323C7E6A2005CDA69 /* Address.swift */,
 				1815DF9023C7E6A2005CDA69 /* Location.swift */,
+				1815DF9623C7E6A2005CDA69 /* GeoLocation.swift */,
 				18E8B88D23D60016000B3C36 /* Precision.swift */,
 				18E8B88F23D60032000B3C36 /* ListingStatus.swift */,
 				18E8B89123D60041000B3C36 /* ListingType.swift */,
 				1815DF9123C7E6A2005CDA69 /* PricingInfos.swift */,
 				18E8B89323D60075000B3C36 /* BusinessType.swift */,
 				18E8B89523D60093000B3C36 /* Period.swift */,
-				1815DF9623C7E6A2005CDA69 /* GeoLocation.swift */,
-				1815DF9323C7E6A2005CDA69 /* Address.swift */,
 				18E8B88B23D5FFC0000B3C36 /* City.swift */,
-				1815DF9223C7E6A2005CDA69 /* Property.swift */,
 				1815DF9523C7E6A2005CDA69 /* JSONSchemaSupport.swift */,
 			);
 			path = Models;
@@ -278,6 +282,8 @@
 				1815DFB323C7F313005CDA69 /* LoadingPresentable.swift */,
 				18E3701D23D1D38000C81A2F /* Formatter.swift */,
 				182AF8E423D4EEDA0041C2DF /* StoryboardInitiable.swift */,
+				184CC76523D73C53006400D4 /* PropertyFilter.swift */,
+				184CC76723D74866006400D4 /* Errors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */,
 				182AF8E523D4EEDA0041C2DF /* StoryboardInitiable.swift in Sources */,
 				18E8B89423D60075000B3C36 /* BusinessType.swift in Sources */,
+				184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */,
 				182AF8C823D20DA50041C2DF /* Identifiable.swift in Sources */,
 				1815DFAF23C7EA5C005CDA69 /* GenericError.swift in Sources */,
 				18E3701F23D1D7BA00C81A2F /* GeneratedStrings.swift in Sources */,
@@ -686,6 +693,7 @@
 				1815DFA623C7E6A3005CDA69 /* PublishableError.swift in Sources */,
 				1815DFA423C7E6A3005CDA69 /* JSONSchemaSupport.swift in Sources */,
 				183D93D423C4C507005DAB20 /* SceneDelegate.swift in Sources */,
+				184CC76823D74866006400D4 /* Errors.swift in Sources */,
 				182AF8C623D20D410041C2DF /* UICollectionView+dequeByType.swift in Sources */,
 				18E8B89823D614D2000B3C36 /* UIScrollView+Paging.swift in Sources */,
 				1815DFA523C7E6A3005CDA69 /* GeoLocation.swift in Sources */,

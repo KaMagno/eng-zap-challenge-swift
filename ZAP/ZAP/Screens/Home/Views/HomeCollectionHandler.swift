@@ -48,4 +48,9 @@ extension HomeCollectionHandler: UICollectionViewDelegate {
             delegate?.didEndPage()
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let cell: PropertyCellCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.outletImageView.kf.cancelDownloadTask()
+    }
 }

@@ -32,40 +32,52 @@ final class BoundingBoxFilter: PropertyFilter {
     let maximumLatitude: Double = -23.546686
     let maximumLongitude: Double = -46.641146
 
-    private func isInsideArea(latitude: Double, longitude: Double) -> Bool {
-        let insideLatitude = latitude >= minimumLatitude && latitude <= maximumLatitude
-        let insideLongitude = latitude >= minimumLongitude && latitude <= maximumLongitude
+    func isInsideArea(location: Location) -> Bool {
+        let insideLatitude = location.lat >= minimumLatitude && location.lat <= maximumLatitude
+        let insideLongitude = location.lon >= minimumLongitude && location.lon <= maximumLongitude
         return insideLatitude && insideLongitude
     }
 
     func filteredProperties(_ properties: Properties) -> Properties {
         properties.filter { (property) -> Bool in
-            isInsideArea(latitude: property.address.geoLocation.location.lat, longitude: property.address.geoLocation.location.lon)
+            isInsideArea(location: property.address.geoLocation.location)
         }
     }
 }
 
 final class ZAPFilter: PropertyFilter {
-    let minimumRentalPrice = 3500
-    let maximumPrice = 600000
+    let minimumRentalPrice: Double = 3500.0
+    let maximumPrice: Double = 600000.0
+    let minimumRentalPricePercentageForInsideArea = 0.9 //10%
 
-    private func isMoreThanMinimun(rentalPrice: Int?) -> Bool {
-        guard let rentalPrice = rentalPrice else {
+    private func minimumRentalPrice(for location: Location) -> Double {
+        if BoundingBoxFilter().isInsideArea(location: location) {
+            return minimumRentalPrice * minimumRentalPricePercentageForInsideArea
+        }else{
+            return maximumPrice
+        }
+    }
+
+    private func isRentalPriceMoreThanMinimun(_ property: Property) -> Bool {
+        guard let rentalPrice = property.pricingInfos.rentalTotalPrice else {
             return false
         }
 
-        return rentalPrice > minimumRentalPrice
+        let doubleRentalPrice = Double(rentalPrice)
+
+        return doubleRentalPrice > minimumRentalPrice(for: property.address.geoLocation.location)
     }
 
     private func isMoreThanMinimun(price: Int) -> Bool {
-        return price > maximumPrice
+        let doublePrice = Double(price)
+        return doublePrice > maximumPrice
     }
 
     func filteredProperties(_ properties: Properties) -> Properties {
         properties.filter { (property) -> Bool in
             switch property.pricingInfos.businessType {
             case .rental:
-                return isMoreThanMinimun(rentalPrice: property.pricingInfos.rentalTotalPrice)
+                return isRentalPriceMoreThanMinimun(property)
             case .sale:
                 return isMoreThanMinimun(price: property.pricingInfos.price)
             }
@@ -75,24 +87,31 @@ final class ZAPFilter: PropertyFilter {
 
 final class VivaRealFilter: PropertyFilter {
     let maximumRentalPrice = 4000.0
+    let maximumRentalPricePercentageForInsideArea = 1.5 //50%
     let maximumPrice = 700000
     let percentageMinimumMonthlyCondoFeeOfRentalPrice = 0.3
 
-    private func isLessThanMaximum(rentalPrice: Int?) -> Bool {
-        guard let rentalPrice = rentalPrice else {
+    private func maximumRentalPrice(for location: Location) -> Double {
+        if BoundingBoxFilter().isInsideArea(location: location) {
+            return maximumRentalPrice * maximumRentalPricePercentageForInsideArea
+        }else{
+            return maximumRentalPrice
+        }
+    }
+
+    private func isRentalPriceLessThanMaximum(_ property: Property) -> Bool {
+        guard let rentalPrice = property.pricingInfos.rentalTotalPrice else {
             return false
         }
 
         let doubleRentalPrice = Double(rentalPrice)
 
-
-
-        return doubleRentalPrice <= maximumRentalPrice
+        return doubleRentalPrice <= maximumRentalPrice(for: property.address.geoLocation.location)
     }
 
-    private func isMonthlyCondoFee(_ monthlyCondoFee: Int?, lessThirtyPercentLessThanRentalPrice rentalPrice: Int?) -> Bool {
-        guard let monthlyCondoFee = monthlyCondoFee,
-            let rentalPrice = rentalPrice else {
+    private func isMonthlyCondoFeePercentageLessThirtyPercentLessThanRentalPrice(_ property: Property) -> Bool {
+        guard let monthlyCondoFee = property.pricingInfos.monthlyCondoFee,
+            let rentalPrice = property.pricingInfos.rentalTotalPrice else {
                 return false
         }
 
@@ -102,20 +121,19 @@ final class VivaRealFilter: PropertyFilter {
         return doubleMonthlyCondoFee < (percentageMinimumMonthlyCondoFeeOfRentalPrice * doubleRentalPrice)
     }
 
-    private func isLessThanMaximum(price: Int) -> Bool {
-        return price > maximumPrice
+    private func isLessThanMaximumPrice(_ property: Property) -> Bool {
+        return property.pricingInfos.price > maximumPrice
     }
 
     func filteredProperties(_ properties: Properties) -> Properties {
         properties.filter { (property) -> Bool in
             switch property.pricingInfos.businessType {
             case .rental:
-                let rentalPrice = property.pricingInfos.rentalTotalPrice
-                return isLessThanMaximum(rentalPrice: rentalPrice) &&
-                    isMonthlyCondoFee(property.pricingInfos.monthlyCondoFee, lessThirtyPercentLessThanRentalPrice: rentalPrice)
+                return isRentalPriceLessThanMaximum(property) &&
+                    isMonthlyCondoFeePercentageLessThirtyPercentLessThanRentalPrice(property)
 
             case .sale:
-                return isLessThanMaximum(rentalPrice: property.pricingInfos.price)
+                return isLessThanMaximumPrice(property)
             }
         }
     }

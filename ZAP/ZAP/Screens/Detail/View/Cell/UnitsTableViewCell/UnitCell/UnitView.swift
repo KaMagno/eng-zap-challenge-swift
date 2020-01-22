@@ -48,7 +48,10 @@ extension UnitView: CodeView {
         stack.axis = .vertical
 
         titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        subtitleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .ultraLight)
+
+        titleLabel.adjustsFontSizeToFitWidth = true
+        subtitleLabel.adjustsFontSizeToFitWidth = true
 
         titleLabel.textAlignment = .center
         subtitleLabel.textAlignment = .center

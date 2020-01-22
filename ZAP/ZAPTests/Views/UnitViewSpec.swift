@@ -17,14 +17,28 @@ final class UnitViewSpec: QuickSpec {
         describe("UnitView") {
             var sut: UnitView!
 
-            context("when initialize and setup with title and subtitle") {
+            context("when initialize") {
                 beforeEach {
                     sut = UnitView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-                    sut.setup(title: "Title", subtitle: "Subtitle")
-                    sut.backgroundColor = .white
                 }
-                it("has to match the layout") {
-                    expect(sut) == recordSnapshot()
+                context("and setup with title and subtitle") {
+                    beforeEach {
+                        sut.setup(title: "Title", subtitle: "Subtitle")
+                        sut.backgroundColor = .white
+                    }
+                    it("has to match the layout") {
+                        expect(sut) == snapshot()
+                    }
+                }
+
+                context("and setup with a long title and subtitle") {
+                    beforeEach {
+                        sut.setup(title: "TitleABCDEFGHIJKLMNOPQRST", subtitle: "Subtitle123456789009876543211234567890")
+                        sut.backgroundColor = .white
+                    }
+                    it("has to match the layout") {
+                        expect(sut) == snapshot()
+                    }
                 }
             }
         }

@@ -9,16 +9,46 @@
 import UIKit
 
 class UnitsTableViewCell: UITableViewCell {
+    private let stack: UIStackView = .init(frame: .zero)
+
+    init(frame: CGRect = .zero) {
+        super.init(style: .default, reuseIdentifier: nil)
+        setupView()
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setup(units: [(title: String, subtitle: String)]) {
+        for unit in units {
+            let unitView = UnitView()
+            unitView.setup(title: unit.title, subtitle: unit.subtitle)
+            stack.addArrangedSubview(unitView)
+        }
+    }
+}
 
-        // Configure the view for the selected state
+extension UnitsTableViewCell: CodeView {
+    func setupViewHierarchy() {
+        addSubview(stack)
     }
 
+    func setupConstraints() {
+        stack.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(8)
+            make.top.bottom.equalToSuperview()
+        }
+    }
+
+    func setupAdditionalConfiguration() {
+        stack.distribution = .fillEqually
+        stack.spacing = 4
+    }
 }

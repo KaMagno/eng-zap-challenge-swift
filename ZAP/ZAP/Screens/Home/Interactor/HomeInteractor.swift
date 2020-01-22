@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeInteractorInterface {
     var delegate: HomeInteractorDelegate? {get set}
+    var propertyType: PropertyType {get set}
 
     func fetchProperties()
     func fetchMoreProperties()
@@ -17,6 +18,7 @@ protocol HomeInteractorInterface {
 
 protocol HomeInteractorDelegate: AnyObject {
     func didFetch(_ properties: Properties)
+    func didFetchMore(_ properties: Properties)
     func didFetch(_ error: PublishableError)
 }
 
@@ -32,6 +34,7 @@ final class HomeInteractor {
 
     // MARK: Public
     weak var delegate: HomeInteractorDelegate?
+    var propertyType: PropertyType = .ZAP
 
     // MARK: - Init
     init(service: PropertiesServiceInterface) {
@@ -39,8 +42,17 @@ final class HomeInteractor {
     }
 
     // MARK: - Functions
+    private func filter(by propertyType: PropertyType) -> PropertyFilter {
+        switch propertyType {
+        case .ZAP:
+            return ZAPFilter()
+        case .VivaReal:
+            return VivaRealFilter()
+        }
+    }
+
     private func handle(properties: Properties) {
-        resetPage()
+        reset()
         allProperties = properties
         addMoreProperties()
         update()
@@ -49,17 +61,25 @@ final class HomeInteractor {
     private func addMoreProperties() {
         let initialIndex = page*numbersOfElementsInPage
         let lastIndex = initialIndex + numbersOfElementsInPage
-        for i in initialIndex..<lastIndex where i < allProperties.count {
-            visibleProperties.append(allProperties[i])
+        let propertyFilter = filter(by: propertyType)
+        let filteredProperties = allProperties.filter(propertyFilter)
+
+        for i in initialIndex..<lastIndex where i < filteredProperties.count {
+            visibleProperties.append(filteredProperties[i])
         }
     }
 
-    private func resetPage() {
+    private func reset() {
         page = 0
+        visibleProperties = []
     }
 
     private func update() {
-        delegate?.didFetch(visibleProperties)
+        if page == 0 {
+            delegate?.didFetch(visibleProperties)
+        }else{
+            delegate?.didFetchMore(visibleProperties)
+        }
     }
 }
 

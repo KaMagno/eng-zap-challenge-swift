@@ -13,9 +13,11 @@ protocol HomeViewInterface: LoadingPresentable {
 
     func set(_ data: Properties)
     func show(_ status: ViewControllerStatus)
+    func resetView()
 }
 
 protocol HomeViewDelegate: AnyObject {
+    func handlePropertyTypeValueChanged(_ viewController: HomeViewController, propertyType: PropertyType)
     func handleEmpty(_ viewController: HomeViewController)
     func handleFetchData(_ viewController: HomeViewController)
     func handleFetchMoreData(_ viewController: HomeViewController)
@@ -72,12 +74,23 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
 
     // MARK: - IBActions
     @IBAction func changeValue(_ sender: UISegmentedControl) {
-
+        switch sender.selectedSegmentIndex {
+        case 0:
+            delegate?.handlePropertyTypeValueChanged(self, propertyType: .ZAP)
+        default:
+            delegate?.handlePropertyTypeValueChanged(self, propertyType: .VivaReal)
+        }
     }
 }
 
 // MARK: - HomeViewInterface
 extension HomeViewController: HomeViewInterface {
+    func resetView() {
+        DispatchQueue.main.async {
+            self.outletCollection.scrollToItem(at: IndexPath(item: 0, section: 0 ), at: .top, animated: true)
+        }
+    }
+
     func show(_ status: ViewControllerStatus) {
         switch status {
         case .default:

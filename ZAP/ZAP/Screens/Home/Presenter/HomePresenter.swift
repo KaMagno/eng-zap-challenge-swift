@@ -31,6 +31,12 @@ extension HomePresenter: HomeInteractorDelegate {
     func didFetch(_ properties: Properties) {
         view.set(properties)
         view.show(.default)
+        view.resetView()
+    }
+
+    func didFetchMore(_ properties: Properties) {
+        view.set(properties)
+        view.show(.default)
     }
 
     func didFetch(_ error: PublishableError) {
@@ -39,6 +45,12 @@ extension HomePresenter: HomeInteractorDelegate {
 }
 
 extension HomePresenter: HomeViewDelegate {
+    func handlePropertyTypeValueChanged(_ viewController: HomeViewController, propertyType: PropertyType) {
+        interactor.propertyType = propertyType
+        interactor.fetchProperties()
+        view.show(.loading)
+    }
+
     func handleEmpty(_ viewController: HomeViewController) {
         view.show(.empty)
     }

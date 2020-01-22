@@ -23,11 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             isTesting == "true" {
             return
         }else{
-            startWindow()
+            startWindow(scene)
         }
     }
 
-    private func startWindow() {
+    private func startWindow(_ scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let frame = UIScreen.main.bounds
         self.window = UIWindow(frame: frame)

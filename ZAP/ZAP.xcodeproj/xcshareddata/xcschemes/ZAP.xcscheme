@@ -55,7 +55,8 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "183D93CD23C4C507005DAB20"
@@ -63,7 +64,7 @@
             BlueprintName = "ZAP"
             ReferencedContainer = "container:ZAP.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "isTesting"

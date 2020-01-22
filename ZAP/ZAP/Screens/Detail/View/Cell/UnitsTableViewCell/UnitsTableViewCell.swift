@@ -13,6 +13,7 @@ class UnitsTableViewCell: UITableViewCell {
 
     init(frame: CGRect = .zero) {
         super.init(style: .default, reuseIdentifier: nil)
+        self.frame = frame
         setupView()
     }
 

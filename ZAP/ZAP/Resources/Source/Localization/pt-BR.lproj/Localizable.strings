@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  ZAP
+
+  Created by kaique.magno.santos on 16/01/20.
+  Copyright © 2020 Kaique Magno. All rights reserved.
+*/
+
+"empty-message" = "Nenhum imóvel disponível no momento";
+"number-bed-rooms" = "%i quarto";
+"number-bed-rooms-plural" = "%i quartos";
+"number-bath-rooms" = "%i banheiro";
+"number-bath-rooms-plural" = "%i banheiros";
+"number-parking-area" = "%i vaga";
+"number-parking-area-plural" = "%i vagas";
+"try-again" = "Tente novamente";
+"rental" = "Aluguar";
+"sale" = "Á venda";

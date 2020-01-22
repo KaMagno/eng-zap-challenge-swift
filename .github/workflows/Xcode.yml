@@ -12,8 +12,12 @@ jobs:
             destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11']
     steps:
     - uses: actions/checkout@master
+      
+    - name: Carthage
+      run: |
+         cd ZAP && carthage bootstrap --no-use-binaries --platform iOS --cache-builds
     - name: Build and test
       run: |
-         cd ZAP && xcodebuild clean test -project ZAP.xcodeproj -scheme ZAP -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+         cd ZAP && xcodebuild clean test -project ZAP.xcodeproj -scheme ZAPTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       env:
          destination: ${{ matrix.destination }}

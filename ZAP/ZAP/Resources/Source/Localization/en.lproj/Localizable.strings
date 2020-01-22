@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  ZAP
+
+  Created by kaique.magno.santos on 16/01/20.
+  Copyright © 2020 Kaique Magno. All rights reserved.
+*/
+
+"empty-message" = "No properties available at the moment";
+"number-bed-rooms" = "%i bedroom";
+"number-bed-rooms-plural" = "%i bedrooms";
+"number-bath-rooms" = "%i bathroom";
+"number-bath-rooms-plural" = "%i bathrooms";
+"number-parking-area" = "%i parking space";
+"number-parking-area-plural" = "%i parking space";
+"try-again" = "Try Again";
+"rental" = "Rental";
+"sale" = "Sale";

@@ -1,7 +1,14 @@
 input_dir: ../ZAP/Resources
 output_dir: ../ZAP/Resources/Generated/
+
 strings:
-  inputs: Localization/en.lproj/Localizable.strings
-  outputs:
-    templateName: structured-swift4
-    output: GeneratedStrings.swift
+    inputs: Source/Localization/en.lproj/Localizable.strings
+    outputs:
+        templateName: structured-swift4
+        output: GeneratedStrings.swift
+
+xcassets:
+    inputs: Source/Assets.xcassets
+    outputs:
+        templateName: swift4
+        output: ImageAsset.swift

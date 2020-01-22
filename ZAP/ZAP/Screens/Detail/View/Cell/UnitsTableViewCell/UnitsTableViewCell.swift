@@ -21,11 +21,6 @@ class UnitsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupView()
-    }
-
     func setup(units: [(title: String, subtitle: String)]) {
         for unit in units {
             let unitView = UnitView()

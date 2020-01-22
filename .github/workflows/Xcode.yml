@@ -15,7 +15,7 @@ jobs:
       
     - name: Carthage
       run: |
-         carthage bootstrap --no-use-binaries --platform iOS --cache-builds
+         cd ZAP && carthage bootstrap --no-use-binaries --platform iOS --cache-builds
     - name: Build and test
       run: |
          cd ZAP && xcodebuild clean test -project ZAP.xcodeproj -scheme ZAPTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO

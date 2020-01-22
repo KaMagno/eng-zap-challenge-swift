@@ -37,6 +37,20 @@
 		183D93DE23C4C50C005DAB20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D93DC23C4C50C005DAB20 /* LaunchScreen.storyboard */; };
 		184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76523D73C53006400D4 /* PropertyFilter.swift */; };
 		184CC76823D74866006400D4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76723D74866006400D4 /* Errors.swift */; };
+		184CC76C23D78307006400D4 /* ZAPFilterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76B23D78307006400D4 /* ZAPFilterSpec.swift */; };
+		184CC76E23D783AC006400D4 /* VivaRealFilterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76D23D783AC006400D4 /* VivaRealFilterSpec.swift */; };
+		184CC77023D783E1006400D4 /* BoundingBoxFilterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC76F23D783E1006400D4 /* BoundingBoxFilterSpec.swift */; };
+		184CC77223D783ED006400D4 /* MinimumRequirementsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC77123D783ED006400D4 /* MinimumRequirementsSpec.swift */; };
+		184CC77523D78417006400D4 /* MinimumRequirementsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC77423D78417006400D4 /* MinimumRequirementsFilter.swift */; };
+		184CC77723D78440006400D4 /* BoundingBoxFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC77623D78440006400D4 /* BoundingBoxFilter.swift */; };
+		184CC77923D78451006400D4 /* ZAPFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC77823D78451006400D4 /* ZAPFilter.swift */; };
+		184CC77B23D78468006400D4 /* VivaRealFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC77A23D78468006400D4 /* VivaRealFilter.swift */; };
+		184CC79023D7AAD9006400D4 /* PropertiesTestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC78F23D7AAD9006400D4 /* PropertiesTestSupport.swift */; };
+		184CC7A223D7B363006400D4 /* BoundingBoxFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC79D23D7B363006400D4 /* BoundingBoxFilterSpec.json */; };
+		184CC7A323D7B363006400D4 /* DefaultProperties.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC79E23D7B363006400D4 /* DefaultProperties.json */; };
+		184CC7A423D7B363006400D4 /* MinimumRequirementsFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC79F23D7B363006400D4 /* MinimumRequirementsFilterSpec.json */; };
+		184CC7A523D7B363006400D4 /* ZAPFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC7A023D7B363006400D4 /* ZAPFilterSpec.json */; };
+		184CC7A623D7B363006400D4 /* VivaRealFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC7A123D7B363006400D4 /* VivaRealFilterSpec.json */; };
 		1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897627923CFCBAF0007E7FB /* EmptyView.swift */; };
 		18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA223CFCF5F009FFD08 /* CodeView.swift */; };
 		18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */; };
@@ -121,6 +135,20 @@
 		183D93FD23C5063B005DAB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184CC76523D73C53006400D4 /* PropertyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFilter.swift; sourceTree = "<group>"; };
 		184CC76723D74866006400D4 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		184CC76B23D78307006400D4 /* ZAPFilterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAPFilterSpec.swift; sourceTree = "<group>"; };
+		184CC76D23D783AC006400D4 /* VivaRealFilterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaRealFilterSpec.swift; sourceTree = "<group>"; };
+		184CC76F23D783E1006400D4 /* BoundingBoxFilterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxFilterSpec.swift; sourceTree = "<group>"; };
+		184CC77123D783ED006400D4 /* MinimumRequirementsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumRequirementsSpec.swift; sourceTree = "<group>"; };
+		184CC77423D78417006400D4 /* MinimumRequirementsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumRequirementsFilter.swift; sourceTree = "<group>"; };
+		184CC77623D78440006400D4 /* BoundingBoxFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxFilter.swift; sourceTree = "<group>"; };
+		184CC77823D78451006400D4 /* ZAPFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAPFilter.swift; sourceTree = "<group>"; };
+		184CC77A23D78468006400D4 /* VivaRealFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaRealFilter.swift; sourceTree = "<group>"; };
+		184CC78F23D7AAD9006400D4 /* PropertiesTestSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesTestSupport.swift; sourceTree = "<group>"; };
+		184CC79D23D7B363006400D4 /* BoundingBoxFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BoundingBoxFilterSpec.json; sourceTree = "<group>"; };
+		184CC79E23D7B363006400D4 /* DefaultProperties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultProperties.json; sourceTree = "<group>"; };
+		184CC79F23D7B363006400D4 /* MinimumRequirementsFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MinimumRequirementsFilterSpec.json; sourceTree = "<group>"; };
+		184CC7A023D7B363006400D4 /* ZAPFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZAPFilterSpec.json; sourceTree = "<group>"; };
+		184CC7A123D7B363006400D4 /* VivaRealFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VivaRealFilterSpec.json; sourceTree = "<group>"; };
 		1897627923CFCBAF0007E7FB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		18D79DA223CFCF5F009FFD08 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpec.swift; sourceTree = "<group>"; };
@@ -282,7 +310,6 @@
 				1815DFB323C7F313005CDA69 /* LoadingPresentable.swift */,
 				18E3701D23D1D38000C81A2F /* Formatter.swift */,
 				182AF8E423D4EEDA0041C2DF /* StoryboardInitiable.swift */,
-				184CC76523D73C53006400D4 /* PropertyFilter.swift */,
 				184CC76723D74866006400D4 /* Errors.swift */,
 			);
 			path = Utils;
@@ -348,6 +375,7 @@
 				18E3701B23D151E600C81A2F /* README.md */,
 				183D93D123C4C507005DAB20 /* AppDelegate.swift */,
 				183D93D323C4C507005DAB20 /* SceneDelegate.swift */,
+				184CC77323D783FB006400D4 /* FIlters */,
 				1815DFB223C7F304005CDA69 /* Utils */,
 				1815DF8F23C7E6A2005CDA69 /* Models */,
 				1815DF9823C7E6A2005CDA69 /* Network */,
@@ -384,15 +412,53 @@
 			isa = PBXGroup;
 			children = (
 				18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */,
+				184CC77123D783ED006400D4 /* MinimumRequirementsSpec.swift */,
+				184CC76B23D78307006400D4 /* ZAPFilterSpec.swift */,
+				184CC76D23D783AC006400D4 /* VivaRealFilterSpec.swift */,
+				184CC76F23D783E1006400D4 /* BoundingBoxFilterSpec.swift */,
+				184CC78B23D7A8A0006400D4 /* TestFiles */,
 				18D79DAC23D001E6009FFD08 /* Support */,
 				18D79DAD23D001E9009FFD08 /* Support Files */,
 			);
 			path = ZAPTests;
 			sourceTree = "<group>";
 		};
+		184CC77323D783FB006400D4 /* FIlters */ = {
+			isa = PBXGroup;
+			children = (
+				184CC76523D73C53006400D4 /* PropertyFilter.swift */,
+				184CC77423D78417006400D4 /* MinimumRequirementsFilter.swift */,
+				184CC77623D78440006400D4 /* BoundingBoxFilter.swift */,
+				184CC77823D78451006400D4 /* ZAPFilter.swift */,
+				184CC77A23D78468006400D4 /* VivaRealFilter.swift */,
+			);
+			path = FIlters;
+			sourceTree = "<group>";
+		};
+		184CC78B23D7A8A0006400D4 /* TestFiles */ = {
+			isa = PBXGroup;
+			children = (
+				184CC79C23D7B363006400D4 /* jsons */,
+			);
+			path = TestFiles;
+			sourceTree = "<group>";
+		};
+		184CC79C23D7B363006400D4 /* jsons */ = {
+			isa = PBXGroup;
+			children = (
+				184CC79E23D7B363006400D4 /* DefaultProperties.json */,
+				184CC79D23D7B363006400D4 /* BoundingBoxFilterSpec.json */,
+				184CC79F23D7B363006400D4 /* MinimumRequirementsFilterSpec.json */,
+				184CC7A023D7B363006400D4 /* ZAPFilterSpec.json */,
+				184CC7A123D7B363006400D4 /* VivaRealFilterSpec.json */,
+			);
+			path = jsons;
+			sourceTree = "<group>";
+		};
 		18D79DAC23D001E6009FFD08 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				184CC78F23D7AAD9006400D4 /* PropertiesTestSupport.swift */,
 				18D79DAE23D001FD009FFD08 /* Extensions */,
 			);
 			path = Support;
@@ -567,6 +633,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184CC7A423D7B363006400D4 /* MinimumRequirementsFilterSpec.json in Resources */,
+				184CC7A623D7B363006400D4 /* VivaRealFilterSpec.json in Resources */,
+				184CC7A323D7B363006400D4 /* DefaultProperties.json in Resources */,
+				184CC7A523D7B363006400D4 /* ZAPFilterSpec.json in Resources */,
+				184CC7A223D7B363006400D4 /* BoundingBoxFilterSpec.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +686,7 @@
 		};
 		183D940323C50675005DAB20 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -669,6 +740,7 @@
 				18E3701A23D14F5D00C81A2F /* PropertyCellCollectionViewCell.swift in Sources */,
 				18E8B8A423D6504A000B3C36 /* HomeCollectionHandler.swift in Sources */,
 				1815DFA023C7E6A3005CDA69 /* PricingInfos.swift in Sources */,
+				184CC77923D78451006400D4 /* ZAPFilter.swift in Sources */,
 				1815DF9A23C7E6A3005CDA69 /* HomePresenter.swift in Sources */,
 				182AF8C023D208010041C2DF /* UIViewController+Show.swift in Sources */,
 				1815DF9E23C7E6A3005CDA69 /* HomeRouter.swift in Sources */,
@@ -678,7 +750,9 @@
 				18E3702123D1E7DA00C81A2F /* ErrorView.swift in Sources */,
 				18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */,
 				1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */,
+				184CC77B23D78468006400D4 /* VivaRealFilter.swift in Sources */,
 				182AF8E523D4EEDA0041C2DF /* StoryboardInitiable.swift in Sources */,
+				184CC77723D78440006400D4 /* BoundingBoxFilter.swift in Sources */,
 				18E8B89423D60075000B3C36 /* BusinessType.swift in Sources */,
 				184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */,
 				182AF8C823D20DA50041C2DF /* Identifiable.swift in Sources */,
@@ -696,6 +770,7 @@
 				184CC76823D74866006400D4 /* Errors.swift in Sources */,
 				182AF8C623D20D410041C2DF /* UICollectionView+dequeByType.swift in Sources */,
 				18E8B89823D614D2000B3C36 /* UIScrollView+Paging.swift in Sources */,
+				184CC77523D78417006400D4 /* MinimumRequirementsFilter.swift in Sources */,
 				1815DFA523C7E6A3005CDA69 /* GeoLocation.swift in Sources */,
 				1815DF9D23C7E6A3005CDA69 /* HomeInteractor.swift in Sources */,
 				18E8B89623D60093000B3C36 /* Period.swift in Sources */,
@@ -711,7 +786,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184CC76C23D78307006400D4 /* ZAPFilterSpec.swift in Sources */,
+				184CC77023D783E1006400D4 /* BoundingBoxFilterSpec.swift in Sources */,
+				184CC77223D783ED006400D4 /* MinimumRequirementsSpec.swift in Sources */,
 				18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */,
+				184CC76E23D783AC006400D4 /* VivaRealFilterSpec.swift in Sources */,
+				184CC79023D7AAD9006400D4 /* PropertiesTestSupport.swift in Sources */,
 				18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

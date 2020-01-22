@@ -49,7 +49,7 @@ final class HomeInteractor {
     private func addMoreProperties() {
         let initialIndex = page*numbersOfElementsInPage
         let lastIndex = initialIndex + numbersOfElementsInPage
-        for i in initialIndex..<lastIndex {
+        for i in initialIndex..<lastIndex where i < allProperties.count {
             visibleProperties.append(allProperties[i])
         }
     }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum ListingType: String, Codable {
+enum ListingType: String, Codable, Equatable {
     case used = "USED"
 }

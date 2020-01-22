@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Address: Codable {
+struct Address: Codable, Equatable {
     let city: City
     let neighborhood: String
     let geoLocation: GeoLocation

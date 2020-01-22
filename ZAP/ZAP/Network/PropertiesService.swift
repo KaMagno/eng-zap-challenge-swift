@@ -62,7 +62,7 @@ extension PropertiesService: PropertiesServiceInterface {
             do {
                 let result = try decoder.decode(Properties.self, from: data)
                 completion(
-                    .success(result.filter(DefaultFilter()))
+                    .success(result.filter(MinimumRequirementsFilter()))
                 )
             } catch {
                 completion(

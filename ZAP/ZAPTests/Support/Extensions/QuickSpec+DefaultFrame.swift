@@ -13,5 +13,4 @@ extension QuickSpec {
         //iPhone 11
         return UIScreen.main.bounds
     }
-
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum City: String, Codable {
+enum City: String, Codable, Equatable {
     case empty = ""
     case sãoPaulo = "São Paulo"
 }

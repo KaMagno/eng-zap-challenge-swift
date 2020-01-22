@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum ListingStatus: String, Codable {
+enum ListingStatus: String, Codable, Equatable {
     case active = "ACTIVE"
 }

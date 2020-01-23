@@ -13,10 +13,16 @@ protocol HomePresenterInterface: AnyObject {
     var interactor: HomeInteractorInterface {get set}
 }
 
+protocol HomePresenterDelegate: AnyObject {
+    func didSelect(_ property: Property)
+}
+
 final class HomePresenter: HomePresenterInterface {
 
     var view: HomeViewInterface
     var interactor: HomeInteractorInterface
+
+    var delegate: HomePresenterDelegate?
 
     init(view: HomeViewInterface,
          interactor: HomeInteractorInterface) {
@@ -45,22 +51,26 @@ extension HomePresenter: HomeInteractorDelegate {
 }
 
 extension HomePresenter: HomeViewDelegate {
-    func handlePropertyTypeValueChanged(_ viewController: HomeViewController, propertyType: PropertyType) {
+    func handleSelect(_ property: Property) {
+        delegate?.didSelect(property)
+    }
+
+    func handlePropertyTypeValueChanged(_ propertyType: PropertyType) {
         interactor.propertyType = propertyType
         interactor.fetchProperties()
         view.show(.loading)
     }
 
-    func handleEmpty(_ viewController: HomeViewController) {
+    func handleEmpty() {
         view.show(.empty)
     }
 
-    func handleFetchData(_ viewController: HomeViewController) {
+    func handleFetchData() {
         interactor.fetchProperties()
         view.show(.loading)
     }
 
-    func handleFetchMoreData(_ viewController: HomeViewController) {
+    func handleFetchMoreData() {
         interactor.fetchMoreProperties()
     }
 }

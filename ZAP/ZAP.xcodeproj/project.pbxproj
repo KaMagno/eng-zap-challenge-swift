@@ -52,6 +52,13 @@
 		184CC7A523D7B363006400D4 /* ZAPFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC7A023D7B363006400D4 /* ZAPFilterSpec.json */; };
 		184CC7A623D7B363006400D4 /* VivaRealFilterSpec.json in Resources */ = {isa = PBXBuildFile; fileRef = 184CC7A123D7B363006400D4 /* VivaRealFilterSpec.json */; };
 		184CC7A823D7CEB2006400D4 /* PropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CC7A723D7CEB2006400D4 /* PropertyType.swift */; };
+		187A9E7C23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7B23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift */; };
+		187A9E7E23D8E540005FFC95 /* TitleTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7D23D8E540005FFC95 /* TitleTableViewCellSpec.swift */; };
+		187A9E8023D8F305005FFC95 /* ImagesTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7F23D8F305005FFC95 /* ImagesTableViewCellSpec.swift */; };
+		187A9E8223D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */; };
+		187A9E8423D8FF03005FFC95 /* DetailFactoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */; };
+		187A9E8623D92E7B005FFC95 /* DetailTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */; };
+		187A9E8823D938B8005FFC95 /* DetailCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8723D938B8005FFC95 /* DetailCellType.swift */; };
 		1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897627923CFCBAF0007E7FB /* EmptyView.swift */; };
 		18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA223CFCF5F009FFD08 /* CodeView.swift */; };
 		18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */; };
@@ -74,6 +81,15 @@
 		18E8B89623D60093000B3C36 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8B89523D60093000B3C36 /* Period.swift */; };
 		18E8B89823D614D2000B3C36 /* UIScrollView+Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8B89723D614D2000B3C36 /* UIScrollView+Paging.swift */; };
 		18E8B8A423D6504A000B3C36 /* HomeCollectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8B8A323D6504A000B3C36 /* HomeCollectionHandler.swift */; };
+		18EBF36923D89B1B007FA71A /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF36823D89B1B007FA71A /* DetailRouter.swift */; };
+		18EBF36B23D89B26007FA71A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF36A23D89B26007FA71A /* DetailInteractor.swift */; };
+		18EBF36D23D89B36007FA71A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF36C23D89B36007FA71A /* DetailPresenter.swift */; };
+		18EBF36F23D8A062007FA71A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF36E23D8A062007FA71A /* DetailViewController.swift */; };
+		18EBF37223D8B342007FA71A /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF37123D8B342007FA71A /* ImagesTableViewCell.swift */; };
+		18EBF37423D8B349007FA71A /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF37323D8B349007FA71A /* TitleTableViewCell.swift */; };
+		18EBF37623D8B368007FA71A /* UnitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF37523D8B368007FA71A /* UnitsTableViewCell.swift */; };
+		18EBF37A23D8B401007FA71A /* UnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF37923D8B401007FA71A /* UnitView.swift */; };
+		18EBF37E23D8BC1B007FA71A /* UnitViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBF37D23D8BC1B007FA71A /* UnitViewSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +167,13 @@
 		184CC7A023D7B363006400D4 /* ZAPFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZAPFilterSpec.json; sourceTree = "<group>"; };
 		184CC7A123D7B363006400D4 /* VivaRealFilterSpec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VivaRealFilterSpec.json; sourceTree = "<group>"; };
 		184CC7A723D7CEB2006400D4 /* PropertyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyType.swift; sourceTree = "<group>"; };
+		187A9E7B23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsTableViewCellSpec.swift; sourceTree = "<group>"; };
+		187A9E7D23D8E540005FFC95 /* TitleTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellSpec.swift; sourceTree = "<group>"; };
+		187A9E7F23D8F305005FFC95 /* ImagesTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCellSpec.swift; sourceTree = "<group>"; };
+		187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHeightTableViewCell.swift; sourceTree = "<group>"; };
+		187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactoryCell.swift; sourceTree = "<group>"; };
+		187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewHandler.swift; sourceTree = "<group>"; };
+		187A9E8723D938B8005FFC95 /* DetailCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellType.swift; sourceTree = "<group>"; };
 		1897627923CFCBAF0007E7FB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		18D79DA223CFCF5F009FFD08 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpec.swift; sourceTree = "<group>"; };
@@ -177,6 +200,15 @@
 		18E8B89523D60093000B3C36 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		18E8B89723D614D2000B3C36 /* UIScrollView+Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Paging.swift"; sourceTree = "<group>"; };
 		18E8B8A323D6504A000B3C36 /* HomeCollectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionHandler.swift; sourceTree = "<group>"; };
+		18EBF36823D89B1B007FA71A /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		18EBF36A23D89B26007FA71A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		18EBF36C23D89B36007FA71A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		18EBF36E23D8A062007FA71A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18EBF37123D8B342007FA71A /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
+		18EBF37323D8B349007FA71A /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		18EBF37523D8B368007FA71A /* UnitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsTableViewCell.swift; sourceTree = "<group>"; };
+		18EBF37923D8B401007FA71A /* UnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitView.swift; sourceTree = "<group>"; };
+		18EBF37D23D8BC1B007FA71A /* UnitViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitViewSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +292,10 @@
 		1815DF8E23C7E6A2005CDA69 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				18EBF36723D89AF3007FA71A /* View */,
+				18EBF36623D89AEE007FA71A /* Presenter */,
+				18EBF36523D89AE9007FA71A /* Interactor */,
+				18EBF36423D89AE2007FA71A /* Router */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -303,6 +339,7 @@
 				18E3701D23D1D38000C81A2F /* Formatter.swift */,
 				182AF8E423D4EEDA0041C2DF /* StoryboardInitiable.swift */,
 				184CC76723D74866006400D4 /* Errors.swift */,
+				187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -403,11 +440,8 @@
 		183D93FA23C5063B005DAB20 /* ZAPTests */ = {
 			isa = PBXGroup;
 			children = (
-				18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */,
-				184CC77123D783ED006400D4 /* MinimumRequirementsSpec.swift */,
-				184CC76B23D78307006400D4 /* ZAPFilterSpec.swift */,
-				184CC76D23D783AC006400D4 /* VivaRealFilterSpec.swift */,
-				184CC76F23D783E1006400D4 /* BoundingBoxFilterSpec.swift */,
+				18EBF37C23D8BB78007FA71A /* Views */,
+				18EBF37B23D8BB73007FA71A /* Filters */,
 				184CC78B23D7A8A0006400D4 /* TestFiles */,
 				18D79DAC23D001E6009FFD08 /* Support */,
 				18D79DAD23D001E9009FFD08 /* Support Files */,
@@ -541,6 +575,84 @@
 				18D79DDD23D0C96A009FFD08 /* Localization */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		18EBF36423D89AE2007FA71A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF36823D89B1B007FA71A /* DetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		18EBF36523D89AE9007FA71A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF36A23D89B26007FA71A /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		18EBF36623D89AEE007FA71A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF36C23D89B36007FA71A /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18EBF36723D89AF3007FA71A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF36E23D8A062007FA71A /* DetailViewController.swift */,
+				187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */,
+				187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */,
+				187A9E8723D938B8005FFC95 /* DetailCellType.swift */,
+				18EBF37023D8B317007FA71A /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18EBF37023D8B317007FA71A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF37123D8B342007FA71A /* ImagesTableViewCell.swift */,
+				18EBF37323D8B349007FA71A /* TitleTableViewCell.swift */,
+				18EBF37723D8B3DC007FA71A /* UnitsTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18EBF37723D8B3DC007FA71A /* UnitsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18EBF37523D8B368007FA71A /* UnitsTableViewCell.swift */,
+				18EBF37923D8B401007FA71A /* UnitView.swift */,
+			);
+			path = UnitsTableViewCell;
+			sourceTree = "<group>";
+		};
+		18EBF37B23D8BB73007FA71A /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				184CC77123D783ED006400D4 /* MinimumRequirementsSpec.swift */,
+				184CC76B23D78307006400D4 /* ZAPFilterSpec.swift */,
+				184CC76D23D783AC006400D4 /* VivaRealFilterSpec.swift */,
+				184CC76F23D783E1006400D4 /* BoundingBoxFilterSpec.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		18EBF37C23D8BB78007FA71A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */,
+				18EBF37D23D8BC1B007FA71A /* UnitViewSpec.swift */,
+				187A9E7B23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift */,
+				187A9E7D23D8E540005FFC95 /* TitleTableViewCellSpec.swift */,
+				187A9E7F23D8F305005FFC95 /* ImagesTableViewCellSpec.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -751,28 +863,38 @@
 				18E3701A23D14F5D00C81A2F /* PropertyCellCollectionViewCell.swift in Sources */,
 				18E8B8A423D6504A000B3C36 /* HomeCollectionHandler.swift in Sources */,
 				1815DFA023C7E6A3005CDA69 /* PricingInfos.swift in Sources */,
+				18EBF37623D8B368007FA71A /* UnitsTableViewCell.swift in Sources */,
 				184CC77923D78451006400D4 /* ZAPFilter.swift in Sources */,
 				1815DF9A23C7E6A3005CDA69 /* HomePresenter.swift in Sources */,
 				182AF8C023D208010041C2DF /* UIViewController+Show.swift in Sources */,
 				1815DF9E23C7E6A3005CDA69 /* HomeRouter.swift in Sources */,
 				18E8B89223D60041000B3C36 /* ListingType.swift in Sources */,
 				1815DFB123C7EC35005CDA69 /* URLMisstypingError.swift in Sources */,
+				18EBF36D23D89B36007FA71A /* DetailPresenter.swift in Sources */,
+				18EBF36B23D89B26007FA71A /* DetailInteractor.swift in Sources */,
+				187A9E8423D8FF03005FFC95 /* DetailFactoryCell.swift in Sources */,
 				182AF8D723D22CBC0041C2DF /* ImageAsset.swift in Sources */,
+				187A9E8823D938B8005FFC95 /* DetailCellType.swift in Sources */,
 				18E3702123D1E7DA00C81A2F /* ErrorView.swift in Sources */,
+				18EBF36923D89B1B007FA71A /* DetailRouter.swift in Sources */,
 				18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */,
 				184CC7A823D7CEB2006400D4 /* PropertyType.swift in Sources */,
 				1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */,
 				184CC77B23D78468006400D4 /* VivaRealFilter.swift in Sources */,
 				182AF8E523D4EEDA0041C2DF /* StoryboardInitiable.swift in Sources */,
 				184CC77723D78440006400D4 /* BoundingBoxFilter.swift in Sources */,
+				18EBF37423D8B349007FA71A /* TitleTableViewCell.swift in Sources */,
 				18E8B89423D60075000B3C36 /* BusinessType.swift in Sources */,
 				184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */,
+				187A9E8223D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift in Sources */,
 				182AF8C823D20DA50041C2DF /* Identifiable.swift in Sources */,
 				1815DFAF23C7EA5C005CDA69 /* GenericError.swift in Sources */,
 				18E3701F23D1D7BA00C81A2F /* GeneratedStrings.swift in Sources */,
 				1815DFB423C7F313005CDA69 /* LoadingPresentable.swift in Sources */,
 				18E8B89023D60032000B3C36 /* ListingStatus.swift in Sources */,
+				18EBF37223D8B342007FA71A /* ImagesTableViewCell.swift in Sources */,
 				182AF8BD23D206F90041C2DF /* ViewControllerStatus.swift in Sources */,
+				187A9E8623D92E7B005FFC95 /* DetailTableViewHandler.swift in Sources */,
 				1815DFA723C7E6A3005CDA69 /* PropertiesService.swift in Sources */,
 				1815DFA223C7E6A3005CDA69 /* Address.swift in Sources */,
 				183D93D223C4C507005DAB20 /* AppDelegate.swift in Sources */,
@@ -781,7 +903,9 @@
 				183D93D423C4C507005DAB20 /* SceneDelegate.swift in Sources */,
 				184CC76823D74866006400D4 /* Errors.swift in Sources */,
 				182AF8C623D20D410041C2DF /* UICollectionView+dequeByType.swift in Sources */,
+				18EBF36F23D8A062007FA71A /* DetailViewController.swift in Sources */,
 				18E8B89823D614D2000B3C36 /* UIScrollView+Paging.swift in Sources */,
+				18EBF37A23D8B401007FA71A /* UnitView.swift in Sources */,
 				184CC77523D78417006400D4 /* MinimumRequirementsFilter.swift in Sources */,
 				1815DFA523C7E6A3005CDA69 /* GeoLocation.swift in Sources */,
 				1815DF9D23C7E6A3005CDA69 /* HomeInteractor.swift in Sources */,
@@ -798,13 +922,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187A9E8023D8F305005FFC95 /* ImagesTableViewCellSpec.swift in Sources */,
 				184CC76C23D78307006400D4 /* ZAPFilterSpec.swift in Sources */,
 				184CC77023D783E1006400D4 /* BoundingBoxFilterSpec.swift in Sources */,
 				184CC77223D783ED006400D4 /* MinimumRequirementsSpec.swift in Sources */,
+				18EBF37E23D8BC1B007FA71A /* UnitViewSpec.swift in Sources */,
 				18D79DB023D0020A009FFD08 /* QuickSpec+DefaultFrame.swift in Sources */,
+				187A9E7E23D8E540005FFC95 /* TitleTableViewCellSpec.swift in Sources */,
 				184CC76E23D783AC006400D4 /* VivaRealFilterSpec.swift in Sources */,
 				184CC79023D7AAD9006400D4 /* PropertiesTestSupport.swift in Sources */,
 				18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */,
+				187A9E7C23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

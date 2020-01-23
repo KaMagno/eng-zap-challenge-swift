@@ -20,7 +20,7 @@
 internal enum Asset {
   internal static let empty = ImageAsset(name: "Empty")
   internal static let errorIcon = ImageAsset(name: "Error-icon")
-  internal static let photoPlaceholder = ImageAsset(name: "Photo-placeholder")
+  internal static let photoPlaceholder = ImageAsset(name: "photo-placeholder")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

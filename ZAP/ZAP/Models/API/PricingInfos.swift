@@ -63,7 +63,7 @@ struct PricingInfos: Codable {
     }
 
     func encode(to encoder: Encoder) throws {
-        var container = try encoder.container(keyedBy: CodingKeys.self)
+        var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(businessType, forKey: .businessType)
         try container.encode("\(price)", forKey: .price)
         try container.encodeIfPresent(period, forKey: .period)

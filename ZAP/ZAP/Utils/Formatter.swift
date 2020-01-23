@@ -9,13 +9,19 @@
 import Foundation
 
 final class Formatter {
-    static func title(_ businessType: BusinessType) -> String {
+    private init() {}
+
+    static func bussinessType(_ businessType: BusinessType) -> String {
         switch businessType {
         case .rental:
             return L10n.rental
         case .sale:
             return L10n.sale
         }
+    }
+
+    static func valueTitle() -> String {
+        return L10n.value
     }
 
     static func price(_ value: Int) -> String? {
@@ -25,35 +31,47 @@ final class Formatter {
         return formatter.string(from: number)
     }
 
-    static func usableAreas(_ value: String) -> String? {
-        return "\(value) m²"
+    static func usableAreas(_ value: Int) -> String {
+        "\(value)" + usableAreasUnit()
+    }
+
+    static func usableAreasUnit() -> String {
+        return "m²"
+    }
+
+    static func bedRoomsUnit(isPlural: Bool) -> String {
+        if isPlural {
+            return L10n.numberBedRoomsPlural
+        }else{
+            return L10n.numberBedRooms
+        }
+    }
+
+    static func bathRoomsUnit(isPlural: Bool) -> String {
+        if isPlural {
+            return L10n.numberBathRoomsPlural
+        }else{
+            return L10n.numberBathRooms
+        }
+    }
+
+    static func parkingAreaUnit(isPlural: Bool) -> String {
+        if isPlural {
+            return L10n.numberParkingAreaPlural
+        }else{
+            return L10n.numberParkingArea
+        }
     }
 
     static func bedRooms(_ value: Int) -> String {
-        if value == 0 {
-            return L10n.numberBedRooms(value)
-        }else{
-            return L10n.numberBedRoomsPlural(value)
-        }
+        "\(value)" + Formatter.bedRoomsUnit(isPlural: value > 1)
     }
 
     static func bathRooms(_ value: Int) -> String {
-        if value == 0 {
-            return L10n.numberBathRooms(value)
-        }else{
-            return L10n.numberBathRoomsPlural(value)
-        }
-    }
-
-    static func usableAreas(_ value: Int) -> String {
-        return "\(value) m²"
+        "\(value)" + Formatter.bathRoomsUnit(isPlural: value > 1)
     }
 
     static func parkingAreas(_ value: Int) -> String {
-        if value == 0 {
-            return L10n.numberParkingArea(value)
-        }else{
-            return L10n.numberParkingAreaPlural(value)
-        }
+        "\(value)" + Formatter.parkingAreaUnit(isPlural: value > 1)
     }
 }

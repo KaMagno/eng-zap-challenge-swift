@@ -30,9 +30,15 @@ final class HomeRouter {
         self.view = view
         self.presenter = presenter
         self.interactor = interactor
+
+        presenter.delegate = self
     }
 }
 
-extension HomeRouter: HomeRouterInterface {
+extension HomeRouter: HomePresenterDelegate {
+    func didSelect(_ property: Property) {
+        let router = DetailRouter(property: property)
 
+        view.navigationController?.pushViewController(router.view, animated: true)
+    }
 }

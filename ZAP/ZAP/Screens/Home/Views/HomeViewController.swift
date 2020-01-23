@@ -17,10 +17,11 @@ protocol HomeViewInterface: LoadingPresentable {
 }
 
 protocol HomeViewDelegate: AnyObject {
-    func handlePropertyTypeValueChanged(_ viewController: HomeViewController, propertyType: PropertyType)
-    func handleEmpty(_ viewController: HomeViewController)
-    func handleFetchData(_ viewController: HomeViewController)
-    func handleFetchMoreData(_ viewController: HomeViewController)
+    func handlePropertyTypeValueChanged(_ propertyType: PropertyType)
+    func handleEmpty()
+    func handleFetchData()
+    func handleFetchMoreData()
+    func handleSelect(_ property: Property)
 }
 
 final class HomeViewController: UIViewController, StoryboardInitiable {
@@ -55,7 +56,7 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        delegate!.handleFetchData(self)
+        delegate!.handleFetchData()
     }
 
     // MARK: - Functions
@@ -76,9 +77,9 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
     @IBAction func changeValue(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            delegate?.handlePropertyTypeValueChanged(self, propertyType: .ZAP)
+            delegate?.handlePropertyTypeValueChanged(.ZAP)
         default:
-            delegate?.handlePropertyTypeValueChanged(self, propertyType: .VivaReal)
+            delegate?.handlePropertyTypeValueChanged(.VivaReal)
         }
     }
 }
@@ -115,12 +116,15 @@ extension HomeViewController: HomeViewInterface {
 // MARK: - ErrorViewDelegate
 extension HomeViewController: ErrorViewDelegate {
     func didTap(_ view: ErrorView) {
-        delegate?.handleFetchData(self)
+        delegate?.handleFetchData()
     }
 }
 
 extension HomeViewController: HomeCollectionHandlerDelegate {
+    func didSelect(_ property: Property) {
+        delegate?.handleSelect(property)
+    }
     func didEndPage() {
-        delegate?.handleFetchMoreData(self)
+        delegate?.handleFetchMoreData()
     }
 }

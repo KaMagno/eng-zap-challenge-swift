@@ -9,6 +9,7 @@
 import UIKit
 
 protocol HomeCollectionHandlerDelegate: AnyObject {
+    func didSelect(_ property: Property)
     func didEndPage()
 }
 
@@ -52,5 +53,10 @@ extension HomeCollectionHandler: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let cell: PropertyCellCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.outletImageView.kf.cancelDownloadTask()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let property = properties[indexPath.row]
+        delegate?.didSelect(property)
     }
 }

@@ -71,6 +71,7 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
         collectionHandler?.delegate = self
         collectionView.dataSource = collectionHandler
         collectionView.delegate = collectionHandler
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
 
     // MARK: - IBActions

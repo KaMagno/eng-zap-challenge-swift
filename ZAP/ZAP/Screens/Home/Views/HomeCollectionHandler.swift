@@ -60,3 +60,16 @@ extension HomeCollectionHandler: UICollectionViewDelegate {
         delegate?.didSelect(property)
     }
 }
+
+extension HomeCollectionHandler: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let ratio: CGFloat = 360/400
+        let width = collectionView.bounds.width
+        let heigth: CGFloat = width * ratio
+        return .init(width: width, height: heigth)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+}

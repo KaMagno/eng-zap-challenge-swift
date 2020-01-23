@@ -32,7 +32,7 @@ final class Formatter {
     }
 
     static func usableAreas(_ value: Int) -> String {
-        "\(value)" + usableAreasUnit()
+        "\(value) " + usableAreasUnit()
     }
 
     static func usableAreasUnit() -> String {
@@ -64,14 +64,14 @@ final class Formatter {
     }
 
     static func bedRooms(_ value: Int) -> String {
-        "\(value)" + Formatter.bedRoomsUnit(isPlural: value > 1)
+        "\(value) " + Formatter.bedRoomsUnit(isPlural: value > 1).capitalized
     }
 
     static func bathRooms(_ value: Int) -> String {
-        "\(value)" + Formatter.bathRoomsUnit(isPlural: value > 1)
+        "\(value) " + Formatter.bathRoomsUnit(isPlural: value > 1).capitalized
     }
 
     static func parkingAreas(_ value: Int) -> String {
-        "\(value)" + Formatter.parkingAreaUnit(isPlural: value > 1)
+        "\(value) " + Formatter.parkingAreaUnit(isPlural: value > 1).capitalized
     }
 }

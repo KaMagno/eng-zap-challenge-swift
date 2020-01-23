@@ -21,9 +21,9 @@ internal enum L10n {
   internal static let numberBedRooms = L10n.tr("Localizable", "number-bed-rooms")
   /// bedrooms
   internal static let numberBedRoomsPlural = L10n.tr("Localizable", "number-bed-rooms-plural")
-  /// parking space
+  /// parking
   internal static let numberParkingArea = L10n.tr("Localizable", "number-parking-area")
-  /// parking space
+  /// parkings
   internal static let numberParkingAreaPlural = L10n.tr("Localizable", "number-parking-area-plural")
   /// Rental
   internal static let rental = L10n.tr("Localizable", "rental")

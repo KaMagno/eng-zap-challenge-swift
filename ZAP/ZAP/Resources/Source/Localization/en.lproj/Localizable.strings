@@ -11,8 +11,8 @@
 "number-bed-rooms-plural" = "bedrooms";
 "number-bath-rooms" = "bathroom";
 "number-bath-rooms-plural" = "bathrooms";
-"number-parking-area" = "parking space";
-"number-parking-area-plural" = "parking space";
+"number-parking-area" = "parking";
+"number-parking-area-plural" = "parkings";
 "try-again" = "Try Again";
 "rental" = "Rental";
 "sale" = "Sale";

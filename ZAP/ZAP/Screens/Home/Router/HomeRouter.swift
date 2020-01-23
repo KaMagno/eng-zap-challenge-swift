@@ -32,6 +32,7 @@ final class HomeRouter {
         self.interactor = interactor
 
         presenter.delegate = self
+        presenter.handleFetchData()
     }
 }
 

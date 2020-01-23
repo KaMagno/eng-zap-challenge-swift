@@ -53,12 +53,6 @@ final class HomeViewController: UIViewController, StoryboardInitiable {
         setup()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        delegate!.handleFetchData()
-    }
-
     // MARK: - Functions
     private func setup() {
         defaultView = view

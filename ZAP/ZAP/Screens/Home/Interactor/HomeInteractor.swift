@@ -8,49 +8,82 @@
 
 import Foundation
 
-protocol HomeInteractorInterface: AnyObject {
+protocol HomeInteractorInterface {
+    var delegate: HomeInteractorDelegate? {get set}
+    var propertyType: PropertyType {get set}
+
     func fetchProperties()
     func fetchMoreProperties()
 }
 
+protocol HomeInteractorDelegate: AnyObject {
+    func didFetch(_ properties: Properties)
+    func didFetchMore(_ properties: Properties)
+    func didFetch(_ error: PublishableError)
+}
+
 final class HomeInteractor {
 
+    // MARK: - Variable
+    // MARK: Private
     private let service: PropertiesServiceInterface
-    private let presenter: HomePresenterInterface
     private var allProperties: Properties = []
     private var visibleProperties: Properties = []
     private var page = 0
     private var numbersOfElementsInPage = 20
 
-    init(service: PropertiesServiceInterface,
-         presenter: HomePresenterInterface) {
+    // MARK: Public
+    weak var delegate: HomeInteractorDelegate?
+    var propertyType: PropertyType = .ZAP
+
+    // MARK: - Init
+    init(service: PropertiesServiceInterface) {
         self.service = service
-        self.presenter = presenter
+    }
+
+    // MARK: - Functions
+    private func filter(by propertyType: PropertyType) -> PropertyFilter {
+        switch propertyType {
+        case .ZAP:
+            return ZAPFilter()
+        case .VivaReal:
+            return VivaRealFilter()
+        }
     }
 
     private func handle(properties: Properties) {
-        resetPage()
+        reset()
         allProperties = properties
         addMoreProperties()
+        update()
     }
 
     private func addMoreProperties() {
         let initialIndex = page*numbersOfElementsInPage
         let lastIndex = initialIndex + numbersOfElementsInPage
-        for i in initialIndex..<lastIndex {
-            visibleProperties.append(allProperties[i])
+        let propertyFilter = filter(by: propertyType)
+        let filteredProperties = allProperties.filter(propertyFilter)
+
+        for i in initialIndex..<lastIndex where i < filteredProperties.count {
+            visibleProperties.append(filteredProperties[i])
         }
     }
 
-    private func resetPage() {
+    private func reset() {
         page = 0
+        visibleProperties = []
     }
 
     private func update() {
-        presenter.show(properties: visibleProperties)
+        if page == 0 {
+            delegate?.didFetch(visibleProperties)
+        }else{
+            delegate?.didFetchMore(visibleProperties)
+        }
     }
 }
 
+// MARK: - HomeInteractorInterface
 extension HomeInteractor: HomeInteractorInterface {
     func fetchProperties() {
         service.requestProperties { [weak self] (result) in
@@ -59,12 +92,14 @@ extension HomeInteractor: HomeInteractorInterface {
                 self?.handle(properties: properties)
 
             case .failure(let error):
-                self?.presenter.show(error: error)
+                self?.delegate?.didFetch(error)
             }
         }
     }
 
     func fetchMoreProperties() {
+        page += 1
         addMoreProperties()
+        update()
     }
 }

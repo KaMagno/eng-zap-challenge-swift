@@ -40,15 +40,15 @@ extension EmptyView: CodeView {
 
     func setupConstraints() {
         //I did not use SnapKit in this view with porpose of show my knowledge
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 54).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -54).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 
         let imageAspectRatio: CGFloat = 246 / 140
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: imageAspectRatio).isActive = true
-        imageView.widthAnchor.constraint(lessThanOrEqualToConstant: 246).isActive = true
     }
 
     func setupAdditionalConfiguration() {
@@ -57,7 +57,7 @@ extension EmptyView: CodeView {
         stackView.axis = .vertical
         stackView.spacing = 8
 
-        imageView.image = UIImage(imageLiteralResourceName: "EmptyImage")
+        imageView.image = UIImage(imageLiteralResourceName: "Empty")
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
 

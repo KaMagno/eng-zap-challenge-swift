@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='ZAPTests.xctest' tests='2' failures='1'>
+  <testsuite name='ZAPTests.EmptyViewSpec' tests='1' failures='0'>
+    <testcase classname='ZAPTests.EmptyViewSpec' name='EmptyView__When_initialize__Must_have_the_layout' time='0.179'/>
+  </testsuite>
+  <testsuite name='ZAPTests.ErrorSpec' tests='1' failures='1'>
+    <testcase classname='ZAPTests.ErrorSpec' name='When_run__must_fail'>
+      <failure message='fail() always fails'>ZAPTests/ErrorSpec.swift:19</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

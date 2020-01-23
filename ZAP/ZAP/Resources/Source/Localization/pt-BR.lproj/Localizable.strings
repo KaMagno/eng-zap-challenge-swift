@@ -7,12 +7,13 @@
 */
 
 "empty-message" = "Nenhum imóvel disponível no momento";
-"number-bed-rooms" = "%i quarto";
-"number-bed-rooms-plural" = "%i quartos";
-"number-bath-rooms" = "%i banheiro";
-"number-bath-rooms-plural" = "%i banheiros";
-"number-parking-area" = "%i vaga";
-"number-parking-area-plural" = "%i vagas";
+"number-bed-rooms" = "quarto";
+"number-bed-rooms-plural" = "quartos";
+"number-bath-rooms" = "banheiro";
+"number-bath-rooms-plural" = "banheiros";
+"number-parking-area" = "vaga";
+"number-parking-area-plural" = "vagas";
 "try-again" = "Tente novamente";
 "rental" = "Aluguar";
 "sale" = "Á venda";
+"value" = "Valor";

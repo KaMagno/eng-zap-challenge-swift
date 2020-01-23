@@ -33,7 +33,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: frame)
 
         let router = HomeRouter()
-        window?.rootViewController = UINavigationController(rootViewController: router.view)
+        let navigation = UINavigationController(rootViewController: router.view)
+        navigation.navigationBar.prefersLargeTitles = true
+        window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }

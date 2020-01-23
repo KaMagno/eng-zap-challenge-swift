@@ -8,7 +8,11 @@
 
 import UIKit
 
-class TitleTableViewCell: UITableViewCell {
+class TitleTableViewCell: UITableViewCell, DefaultHeightTableViewCell {
+    var defaultHeight: CGFloat {
+        return 60.0
+    }
+    
     private let leftLabel: UILabel = .init(frame: .zero)
     private let rightLabel: UILabel = .init(frame: .zero)
 
@@ -17,12 +21,12 @@ class TitleTableViewCell: UITableViewCell {
         self.frame = frame
         setupView()
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func setup(leftText: String, rightText: String) {
         leftLabel.text = leftText
         rightLabel.text = rightText
@@ -34,7 +38,7 @@ extension TitleTableViewCell: CodeView {
         addSubview(leftLabel)
         addSubview(rightLabel)
     }
-
+    
     func setupConstraints() {
         leftLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self).inset(8)
@@ -47,12 +51,12 @@ extension TitleTableViewCell: CodeView {
             make.top.bottom.equalToSuperview()
         }
     }
-
+    
     func setupAdditionalConfiguration() {
         leftLabel.textAlignment = .left
         leftLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .bold)
         leftLabel.adjustsFontSizeToFitWidth = true
-
+        
         rightLabel.textAlignment = .right
         rightLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .light)
         rightLabel.adjustsFontSizeToFitWidth = true

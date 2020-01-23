@@ -55,6 +55,10 @@
 		187A9E7C23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7B23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift */; };
 		187A9E7E23D8E540005FFC95 /* TitleTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7D23D8E540005FFC95 /* TitleTableViewCellSpec.swift */; };
 		187A9E8023D8F305005FFC95 /* ImagesTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E7F23D8F305005FFC95 /* ImagesTableViewCellSpec.swift */; };
+		187A9E8223D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */; };
+		187A9E8423D8FF03005FFC95 /* DetailFactoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */; };
+		187A9E8623D92E7B005FFC95 /* DetailTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */; };
+		187A9E8823D938B8005FFC95 /* DetailCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A9E8723D938B8005FFC95 /* DetailCellType.swift */; };
 		1897627A23CFCBAF0007E7FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897627923CFCBAF0007E7FB /* EmptyView.swift */; };
 		18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA223CFCF5F009FFD08 /* CodeView.swift */; };
 		18D79DA523CFD15F009FFD08 /* EmptyViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */; };
@@ -166,6 +170,10 @@
 		187A9E7B23D8D99C005FFC95 /* UnitsTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsTableViewCellSpec.swift; sourceTree = "<group>"; };
 		187A9E7D23D8E540005FFC95 /* TitleTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellSpec.swift; sourceTree = "<group>"; };
 		187A9E7F23D8F305005FFC95 /* ImagesTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCellSpec.swift; sourceTree = "<group>"; };
+		187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHeightTableViewCell.swift; sourceTree = "<group>"; };
+		187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactoryCell.swift; sourceTree = "<group>"; };
+		187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewHandler.swift; sourceTree = "<group>"; };
+		187A9E8723D938B8005FFC95 /* DetailCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellType.swift; sourceTree = "<group>"; };
 		1897627923CFCBAF0007E7FB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		18D79DA223CFCF5F009FFD08 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		18D79DA423CFD15F009FFD08 /* EmptyViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpec.swift; sourceTree = "<group>"; };
@@ -331,6 +339,7 @@
 				18E3701D23D1D38000C81A2F /* Formatter.swift */,
 				182AF8E423D4EEDA0041C2DF /* StoryboardInitiable.swift */,
 				184CC76723D74866006400D4 /* Errors.swift */,
+				187A9E8123D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -596,6 +605,9 @@
 			isa = PBXGroup;
 			children = (
 				18EBF36E23D8A062007FA71A /* DetailViewController.swift */,
+				187A9E8523D92E7B005FFC95 /* DetailTableViewHandler.swift */,
+				187A9E8323D8FF03005FFC95 /* DetailFactoryCell.swift */,
+				187A9E8723D938B8005FFC95 /* DetailCellType.swift */,
 				18EBF37023D8B317007FA71A /* Cell */,
 			);
 			path = View;
@@ -615,17 +627,9 @@
 			isa = PBXGroup;
 			children = (
 				18EBF37523D8B368007FA71A /* UnitsTableViewCell.swift */,
-				18EBF37823D8B3E3007FA71A /* UnitCell */,
-			);
-			path = UnitsTableViewCell;
-			sourceTree = "<group>";
-		};
-		18EBF37823D8B3E3007FA71A /* UnitCell */ = {
-			isa = PBXGroup;
-			children = (
 				18EBF37923D8B401007FA71A /* UnitView.swift */,
 			);
-			path = UnitCell;
+			path = UnitsTableViewCell;
 			sourceTree = "<group>";
 		};
 		18EBF37B23D8BB73007FA71A /* Filters */ = {
@@ -868,7 +872,9 @@
 				1815DFB123C7EC35005CDA69 /* URLMisstypingError.swift in Sources */,
 				18EBF36D23D89B36007FA71A /* DetailPresenter.swift in Sources */,
 				18EBF36B23D89B26007FA71A /* DetailInteractor.swift in Sources */,
+				187A9E8423D8FF03005FFC95 /* DetailFactoryCell.swift in Sources */,
 				182AF8D723D22CBC0041C2DF /* ImageAsset.swift in Sources */,
+				187A9E8823D938B8005FFC95 /* DetailCellType.swift in Sources */,
 				18E3702123D1E7DA00C81A2F /* ErrorView.swift in Sources */,
 				18EBF36923D89B1B007FA71A /* DetailRouter.swift in Sources */,
 				18D79DA323CFCF5F009FFD08 /* CodeView.swift in Sources */,
@@ -880,6 +886,7 @@
 				18EBF37423D8B349007FA71A /* TitleTableViewCell.swift in Sources */,
 				18E8B89423D60075000B3C36 /* BusinessType.swift in Sources */,
 				184CC76623D73C53006400D4 /* PropertyFilter.swift in Sources */,
+				187A9E8223D8FC1B005FFC95 /* DefaultHeightTableViewCell.swift in Sources */,
 				182AF8C823D20DA50041C2DF /* Identifiable.swift in Sources */,
 				1815DFAF23C7EA5C005CDA69 /* GenericError.swift in Sources */,
 				18E3701F23D1D7BA00C81A2F /* GeneratedStrings.swift in Sources */,
@@ -887,6 +894,7 @@
 				18E8B89023D60032000B3C36 /* ListingStatus.swift in Sources */,
 				18EBF37223D8B342007FA71A /* ImagesTableViewCell.swift in Sources */,
 				182AF8BD23D206F90041C2DF /* ViewControllerStatus.swift in Sources */,
+				187A9E8623D92E7B005FFC95 /* DetailTableViewHandler.swift in Sources */,
 				1815DFA723C7E6A3005CDA69 /* PropertiesService.swift in Sources */,
 				1815DFA223C7E6A3005CDA69 /* Address.swift in Sources */,
 				183D93D223C4C507005DAB20 /* AppDelegate.swift in Sources */,

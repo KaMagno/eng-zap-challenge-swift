@@ -9,18 +9,18 @@
 import Foundation
 
 struct Property: Codable {
-    let usableAreas: Int
-    let listingType: ListingType
-    let createdAt: String
-    let listingStatus: ListingStatus
     let id: String
-    let parkingSpaces: Int?
-    let updatedAt: String
-    let owner: Bool
     let images: [String]
+    let usableAreas: Int
+    let parkingSpaces: Int?
+    let owner: Bool
     let address: Address
     let bathrooms, bedrooms: Int
+    let listingType: ListingType
+    let listingStatus: ListingStatus
     let pricingInfos: PricingInfos
+    let updatedAt: String
+    let createdAt: String
 }
 
 extension Property: Equatable {

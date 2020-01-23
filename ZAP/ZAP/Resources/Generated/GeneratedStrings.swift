@@ -13,36 +13,26 @@ import Foundation
 internal enum L10n {
   /// No properties available at the moment
   internal static let emptyMessage = L10n.tr("Localizable", "empty-message")
-  /// %i bathroom
-  internal static func numberBathRooms(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-bath-rooms", p1)
-  }
-  /// %i bathrooms
-  internal static func numberBathRoomsPlural(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-bath-rooms-plural", p1)
-  }
-  /// %i bedroom
-  internal static func numberBedRooms(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-bed-rooms", p1)
-  }
-  /// %i bedrooms
-  internal static func numberBedRoomsPlural(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-bed-rooms-plural", p1)
-  }
-  /// %i parking space
-  internal static func numberParkingArea(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-parking-area", p1)
-  }
-  /// %i parking space
-  internal static func numberParkingAreaPlural(_ p1: Int) -> String {
-    return L10n.tr("Localizable", "number-parking-area-plural", p1)
-  }
+  /// bathroom
+  internal static let numberBathRooms = L10n.tr("Localizable", "number-bath-rooms")
+  /// bathrooms
+  internal static let numberBathRoomsPlural = L10n.tr("Localizable", "number-bath-rooms-plural")
+  /// bedroom
+  internal static let numberBedRooms = L10n.tr("Localizable", "number-bed-rooms")
+  /// bedrooms
+  internal static let numberBedRoomsPlural = L10n.tr("Localizable", "number-bed-rooms-plural")
+  /// parking space
+  internal static let numberParkingArea = L10n.tr("Localizable", "number-parking-area")
+  /// parking space
+  internal static let numberParkingAreaPlural = L10n.tr("Localizable", "number-parking-area-plural")
   /// Rental
   internal static let rental = L10n.tr("Localizable", "rental")
   /// Sale
   internal static let sale = L10n.tr("Localizable", "sale")
   /// Try Again
   internal static let tryAgain = L10n.tr("Localizable", "try-again")
+  /// Value
+  internal static let value = L10n.tr("Localizable", "value")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

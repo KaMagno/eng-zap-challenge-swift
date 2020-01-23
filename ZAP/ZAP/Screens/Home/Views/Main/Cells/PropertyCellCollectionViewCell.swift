@@ -33,7 +33,7 @@ class PropertyCellCollectionViewCell: UICollectionViewCell {
             outletImageView.image = Asset.photoPlaceholder.image
         }
 
-        outletTitle.text = Formatter.title(title)
+        outletTitle.text = Formatter.bussinessType(title)
         outletPrice.text = Formatter.price(price)
         outleBedRooms.text = Formatter.bedRooms(bedRooms)
         outletBathRooms.text = Formatter.bathRooms(bathRooms)

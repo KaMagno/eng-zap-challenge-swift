@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+
+final class DetailRouter {
+    private(set) var view: DetailViewController
+    let presenter: DetailPresenter
+    let interactor: DetailInteractor
+
+    init(property: Property) {
+        view = DetailViewController()
+        interactor = DetailInteractor(property: property)
+        presenter = DetailPresenter(view: view, interactor: interactor)
+        view.delegate = presenter
+        presenter.handleData()
+    }
+}

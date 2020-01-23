@@ -8,7 +8,11 @@
 
 import UIKit
 
-class UnitsTableViewCell: UITableViewCell {
+class UnitsTableViewCell: UITableViewCell, DefaultHeightTableViewCell {
+    var defaultHeight: CGFloat {
+        return 60.0
+    }
+
     private let stack: UIStackView = .init(frame: .zero)
 
     init(frame: CGRect = .zero) {
@@ -48,3 +52,5 @@ extension UnitsTableViewCell: CodeView {
         stack.spacing = 4
     }
 }
+
+

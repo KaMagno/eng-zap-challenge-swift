@@ -9,7 +9,11 @@
 import UIKit
 import Kingfisher
 
-class ImagesTableViewCell: UITableViewCell {
+class ImagesTableViewCell: UITableViewCell, DefaultHeightTableViewCell {
+    var defaultHeight: CGFloat {
+        return 200.0
+    }
+
     private let fullImageView: UIImageView = .init(frame: .zero)
 
     init(frame: CGRect = .zero) {
